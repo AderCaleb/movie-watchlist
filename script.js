@@ -1,4 +1,4 @@
-const form = document.getElementById("moive-form");
+const form = document.getElementById("movie-form");
 const titleInput = document.getElementById("movie-title");
 const genreSelect = document.getElementById("movie-genre");
 const message = document.getElementById("form-message");
@@ -6,21 +6,22 @@ const movieList = document.getElementById("movie-list");
 const emptyMessage = document.getElementById("empty-message");
 
 const watchlist = {
-    movies: [{ title: "The Princess Bride", genre: "Adventure", watched: false }],
+    movies: [{ title: "The Princess Bride", genre: "Adventure", watched: false }, { title: "Lilo and Stitch", genre: "Sci. Fic., Comedy-drama, Family", watched: true }],
     toggleWatched(index) {
-
+        this.movies[index].watched = !this.movies[index].watched;
     },
     removeMovie(index) {
-
+        // This might work?
+        this.movies.slice(index, 1);
     }
 };
 
 function saveMovies() {
-
+    // Step 6
 }
 
 function loadMovies() {
-
+    // Step 6
 }
 
 function renderMovies() {
@@ -65,7 +66,7 @@ function renderMovies() {
 }
 
 form.addEventListener("submit", (event) => {
-
+    // Step 5
 });
 
 loadMovies();
