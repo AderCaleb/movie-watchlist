@@ -18,10 +18,19 @@ const watchlist = {
 
 function saveMovies() {
     // Step 6
+    localStorage.setItem("movies", JSON.stringify(watchlist.movies));
 }
 
 function loadMovies() {
-    // Step 6
+    // Maybe done right?
+    const saved = localStorage.getItem("movies")
+    if (saved !== null) {
+        try {
+            watchlist.movies = JSON.parse(saved)
+        } catch (error) {
+            console.log("Movies can't be loaded.")
+        }
+    }
 }
 
 function renderMovies() {
@@ -67,7 +76,6 @@ function renderMovies() {
 }
 
 form.addEventListener("submit", (event) => {
-    // Step 5
     event.preventDefault();
     const title = titleInput.value.trim();
     const genre = genreSelect.value;
