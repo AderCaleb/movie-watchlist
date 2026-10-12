@@ -6,7 +6,7 @@ const movieList = document.getElementById("movie-list");
 const emptyMessage = document.getElementById("empty-message");
 
 const watchlist = {
-    movies: [{ title: "The Princess Bride", genre: "Adventure", watched: false }, { title: "Lilo and Stitch", genre: "Sci. Fic., Comedy-drama, Family", watched: true }],
+    movies: [],
     toggleWatched(index) {
         this.movies[index].watched = !this.movies[index].watched;
     },

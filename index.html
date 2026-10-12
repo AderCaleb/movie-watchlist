@@ -16,29 +16,50 @@
 </head>
 
 <body>
-    <!-- Website Title -->
-    <header>
+
+    <main class="container">
+        <!-- Title -->
         <h1>Movie Watchlist</h1>
-    </header>
 
-    <!-- Movie Form -->
-    <form id="movie-form" action="">
-        <label for="movie-title">Title: </label>
-        <select name="movie-genre" id="movie-genre">
-            <option value="">Choose a genre</option>
-        </select>
-        <button type="submit">Add Movie</button>
-    </form>
+        <!-- Form -->
+        <form id="movie-form">
+            <!-- Form title -->
+            <label for="movie-title">Movie Title</label>
+            <!-- Input movie title -->
+            <input type="text" id="movie-title" placeholder="Enter movie title">
 
-    <!-- Form Details -->
-    <section id="form-text">
+            <!-- Select movie genre -->
+            <label for="movie-genre">Genre: </label>
+            <select id="movie-genre">
+                <option value="">Choose a genre</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Horror">Horror</option>
+                <option value="Romance">Romance</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Animation">Animation</option>
+            </select>
+
+            <!-- Submit button | Add movie to watchlist -->
+            <button type="submit">Add Movie</button>
+
+        </form>
+
+        <!-- Form message -->
         <p id="form-message"></p>
+        <!-- Movie that was added goes here -->
         <ul id="movie-list">
 
         </ul>
-        <p id="empty-message"></p>
-    </section>
 
+        <!-- Letting the user know if they have a movie in their watchlist or not -->
+        <p id="empty-message">Your Watchlist is empty. Add a movie to get started.</p>
+
+    </main>
+    
 </body>
 
 </html>
