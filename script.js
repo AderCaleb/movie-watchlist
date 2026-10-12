@@ -57,7 +57,8 @@ function renderMovies() {
         movieList.append(card);
         if (watchlist.movies.length === 0) {
             emptyMessage.textContent = "Your watchlist is empty. Add a movie to get started.";
-            // If stuck maybe add a return? Will cirle back to this later
+            // If stuck remove
+            return;
         }
         else {
             emptyMessage.textContent = "";
@@ -67,6 +68,26 @@ function renderMovies() {
 
 form.addEventListener("submit", (event) => {
     // Step 5
+    event.preventDefault();
+    const title = titleInput.value.trim();
+    const genre = genreSelect.value;
+
+    if (title == "") {
+        title.textContent = "Enter a movie title.";
+        return;
+    }
+
+    if (genre == "") {
+        genre.textContent = "Enter a movie genre.";
+        return;
+    }
+
+    watchlist.movies.push({ title: title, genre: genre, watched:false });
+
+    saveMovies();
+    renderMovies();
+    title.textContent = "";
+    genre.textContent = "";
 });
 
 loadMovies();
