@@ -18,18 +18,13 @@
 <body>
 
     <main class="container">
-        <!-- Title -->
         <h1>Movie Watchlist</h1>
 
-        <!-- Form -->
         <form id="movie-form">
-            <!-- Form title -->
             <label for="movie-title">Movie Title</label>
-            <!-- Input movie title -->
             <input type="text" id="movie-title" placeholder="Enter movie title">
 
-            <!-- Select movie genre -->
-            <label for="movie-genre">Genre: </label>
+            <label for="movie-genre">Genre</label>
             <select id="movie-genre">
                 <option value="">Choose a genre</option>
                 <option value="Action">Action</option>
@@ -41,25 +36,22 @@
                 <option value="Science Fiction">Science Fiction</option>
                 <option value="Thriller">Thriller</option>
                 <option value="Animation">Animation</option>
+                <option value="Documentary">Documentary</option>
             </select>
 
-            <!-- Submit button | Add movie to watchlist -->
             <button type="submit">Add Movie</button>
 
         </form>
 
-        <!-- Form message -->
-        <p id="form-message"></p>
-        <!-- Movie that was added goes here -->
-        <ul id="movie-list">
+        <p id="form-message" role="alert" aria-live="polite"></p>
 
-        </ul>
+        <ul id="movie-list"></ul>
 
-        <!-- Letting the user know if they have a movie in their watchlist or not -->
-        <p id="empty-message">Your Watchlist is empty. Add a movie to get started.</p>
+        <p id="empty-message">
+            Your watchlist is empty. Add a movie to get started.
+        </p>
 
     </main>
-    
 </body>
 
 </html>
