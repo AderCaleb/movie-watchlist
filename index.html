@@ -2,17 +2,43 @@
 <html lang="en">
 
 <head>
+    <!-- Author: Caleb Ader
+     Date: 10/12/2026 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Watchlist</title>
 
+    <!-- Styles sheet -->
     <link rel="stylesheet" href="styles.css">
 
-    <script src="script.js"></script>
+    <!-- Script sheet, Defer -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1></h1>
+    <!-- Website Title -->
+    <header>
+        <h1>Movie Watchlist</h1>
+    </header>
+
+    <!-- Movie Form -->
+    <form id="movie-form" action="">
+        <label for="movie-title">Title: </label>
+        <select name="movie-genre" id="movie-genre">
+            <option value="">Choose a genre</option>
+        </select>
+        <button type="submit">Add Movie</button>
+    </form>
+
+    <!-- Form Details -->
+    <section id="form-text">
+        <p id="form-message"></p>
+        <ul id="movie-list">
+
+        </ul>
+        <p id="empty-message"></p>
+    </section>
+
 </body>
 
 </html>
